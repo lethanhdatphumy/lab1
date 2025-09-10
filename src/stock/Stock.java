@@ -99,15 +99,10 @@ public class Stock {
    *
    * @return a string containing stock information with formatting
    */
+  @Override
   public String toString() {
     double percentChange = getChangePercent() * 100;
-    String cleanName = name.replace("Computer", "").trim();
-    cleanName = cleanName.replace("[", "").replace("]", ""); // Remove any brackets from name
     return String.format(
-        "%s Current Price: $ %.2f \n Gain/Loss: %.2f%%",
-        cleanName,
-        currentPrice,
-        percentChange
-    );
+        "%s\n Current Price: $ %.2f  Gain/Loss: %.2f%%", name, currentPrice, percentChange);
   }
 }
