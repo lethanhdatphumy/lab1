@@ -102,8 +102,9 @@ public class Stock {
   public String toString() {
     double percentChange = getChangePercent() * 100;
     String cleanName = name.replace("Computer", "").trim();
+    cleanName = cleanName.replace("[", "").replace("]", ""); // Remove any brackets from name
     return String.format(
-        "%s[ Current Price: $ %.2f] \n Gain/Loss: %.2f%%",
+        "%s[ Current Price: $ %.2f]\n Gain/Loss: %.2f%%",
         cleanName,
         currentPrice,
         percentChange
