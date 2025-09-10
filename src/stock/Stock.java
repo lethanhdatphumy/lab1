@@ -101,7 +101,6 @@ public class Stock {
    */
   public String toString() {
     double percentChange = getChangePercent() * 100;
-    return String.format(
-        "%s\n Current Price: $ %.2f  Gain/Loss: %.2f%%", name, currentPrice, percentChange);
+    return String.format("%s[ Current Price: $ %.2f\n] Gain/Loss: %.2f%%", name, currentPrice, percentChange);
   }
 }
